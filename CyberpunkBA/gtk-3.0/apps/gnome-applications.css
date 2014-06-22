@@ -1,0 +1,349 @@
+/****************
+ * Applications *
+ ****************/
+/* used by gnome-font-viewer and sushi */
+SushiFontWidget {
+	padding: 6px 12px;
+}
+
+
+/************
+ * nautilus *
+ ************/
+.nautilus-canvas-item {
+    border-radius: 2px;
+}
+
+.nautilus-desktop.nautilus-canvas-item {
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.nautilus-desktop.nautilus-canvas-item:active {
+    color: @theme_fg_color;
+}
+
+.nautilus-desktop.nautilus-canvas-item:selected {
+    color: @theme_selected_fg_color;
+}
+
+.nautilus-desktop.nautilus-canvas-item:active,
+.nautilus-desktop.nautilus-canvas-item:prelight,
+.nautilus-desktop.nautilus-canvas-item:selected {
+    text-shadow: none;
+}
+
+NautilusWindow .toolbar {
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: shade(@toolbar_bg_color, 0.7);
+}
+
+NautilusWindow .sidebar .frame {
+    border-style: none;
+}
+
+
+NautilusWindow .sidebar row:hover {
+	background-color: shade (@theme_bg_color, 0.95);
+}
+
+NautilusWindow * {
+	-GtkPaned-handle-size: 1;
+}
+
+NautilusWindow .pane-separator {
+	background-image: url("assets/null.png");
+}
+
+
+NautilusWindow > GtkGrid > .pane-separator,
+NautilusWindow > GtkGrid > .pane-separator:hover {
+    border-width: 0 1px 0 0;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 0.8);
+    background-color: shade(@theme_bg_color, 1.08);
+}
+
+NautilusNotebook.notebook {
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+}
+
+NautilusNotebook .frame {
+    border-width: 0;
+}
+
+NautilusQueryEditor .search-bar.toolbar {
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+
+NautilusQueryEditor .toolbar {
+    padding-top: 3px;
+    padding-bottom: 2px;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: @toolbar_bg_color;
+    background-color: shade(@toolbar_bg_color, 0.9);
+}
+
+NautilusQueryEditor .toolbar:nth-child(2) {
+    border-color: shade(@toolbar_bg_color, 0.8);
+}
+
+NautilusQueryEditor .toolbar:last-child,
+NautilusQueryEditor .search-bar.toolbar:only-child {
+    border-bottom-width: 1px;
+    border-bottom-color: shade(@toolbar_bg_color, 0.8);
+}
+
+/******************
+ * gnome terminal *
+ ******************/
+VteTerminal {
+    background-color: @osd_base;
+    color: @osd_fg;
+}
+
+TerminalWindow GtkNotebook.notebook {
+    border-right-width: 0;
+    border-left-width: 0;
+    border-bottom-width: 0;
+}
+
+/*********
+ * gedit *
+ *********/
+
+ GeditWindow * {
+	-GtkPaned-handle-size: 1;
+}
+
+GeditWindow .pane-separator, 
+GeditWindow .pane-separator:hover {
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 1.0);
+    background-color: shade(@theme_bg_color, 1.0);
+    background-image: url("assets/null.png");
+    color: shade(@theme_bg_color, 1.0);
+}
+
+GeditPanel.title GtkLabel {
+    padding: 4px 0;
+}
+
+GeditPanel.vertical .title {
+    padding: 4px 0 4px 3px;
+    border-style: none;
+}
+
+GeditPanel .toolbar {
+    border-style: none;
+    background-color: transparent;
+}
+
+GeditDocumentsPanel .view {
+    background-color: @theme_bg_color;
+}
+
+GeditStatusComboBox .button,
+GeditStatusComboBox .button:hover,
+GeditStatusComboBox .button:active,
+GeditStatusComboBox .button:active:hover {
+    padding: 1px 6px 2px 4px;
+    border-style: solid;
+    border-width: 0 1px;
+    border-radius: 0;
+}
+
+GeditStatusComboBox .button:hover,
+GeditStatusComboBox .button:active,
+GeditStatusComboBox .button:active:hover {
+    border-color: shade(@theme_bg_color, 0.8);
+}
+
+GeditViewFrame .gedit-search-slider {
+    padding: 4px;
+    border-radius: 0 0 3px 3px;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: shade(@theme_base_color, 0.8);
+    background-color: @base_color;
+}
+
+GeditViewFrame .gedit-search-slider .not-found {
+    background-color: lighter(red);
+    background-image: none;
+    color: white;
+}
+
+GeditViewFrame .gedit-search-slider .not-found:selected {
+    background-color: @theme_selected_bg_color;
+    color: @selected_foreground;
+}
+
+GeditFileBrowserWidget .primary-toolbar.toolbar  {
+    padding: 2px;
+    border-top: none;
+    background-color: @theme_bg_color;
+    background-image: none;
+}
+
+.gedit-search-entry-occurrences-tag {
+    color: @theme_text_color;
+    margin: 2px;
+    padding: 2px;
+}
+
+/*************
+ * gucharmap *
+ *************/
+GucharmapChartable {
+    background-color: @theme_base_color;
+}
+
+GucharmapChartable:active,
+GucharmapChartable:focus,
+GucharmapChartable:selected {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+/*************
+ * evolution *
+ *************/
+EPreviewPane .entry {
+    background-color: @theme_base_color;
+    color: @theme_text_color;
+}
+
+/******************
+ * gnome calendar *
+ ******************/
+.calendar-view {
+    background-color: shade(@theme_base_color, 0.95);
+    color: @theme_text_color;
+}
+
+/******************
+ * Gnome Contacts *
+ ******************/
+
+/* Border on the right in the left menu toolbar */
+.contacts-left-header-bar:dir(ltr) {
+	border-right-width: 1px;
+}
+
+.contacts-left-header-bar:dir(rtl) {
+	border-left-width: 1px;
+}
+
+.contacts-left-header-bar:dir(ltr),
+.contacts-right-header-bar:dir(rtl) {
+	border-top-right-radius: 0;
+}
+
+.contacts-right-header-bar:dir(ltr),
+.contacts-left-header-bar:dir(rtl) {
+	border-top-left-radius: 0;
+}
+
+/* gcalctool */
+
+MathWindow.background > GtkBox.vertical > GtkBox.vertical > GtkScrolledWindow {
+	padding: 4px;
+	background-color: @theme_base_color;
+	border-radius: 3px;
+}
+
+/*
+ * Evince
+ */
+
+EvWindow.background > GtkBox.vertical > GtkPaned.horizontal > GtkBox.vertical > GtkScrolledWindow.frame {
+    border-width: 0;
+    border-radius: 0;
+}
+
+EvWindow.background EvSidebar.vertical .frame {
+    border-width: 1px 0 0;
+    border-radius: 0;
+}
+
+EvWindow.background EvSidebar.vertical .notebook {
+    border-width: 1px 0 0;
+}
+
+EvWindow.background EvSidebarAnnotations.vertical GtkToolPalette > GtkToolItemGroup > .button { 
+	padding: 4px;    
+	border-image: none;
+    border-radius: 0;
+    border-style: solid;
+    border-width: 0 0 1px;
+    border-color: shade(@theme_bg_color, 0.8);
+}
+
+EvWindow.background EvSidebar.vertical .notebook .frame {
+    border-width: 0;
+}
+
+EvWindow .pane-separator, 
+EvWindow .pane-separator:hover {
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: shade(@theme_base_color, 0.9);
+    background-color: transparent;
+    color: shade(@theme_base_color, 0.7);
+}
+
+EvWindow.background EggFindBar.toolbar {
+    border-width: 1px 0 0;
+    border-style: solid;
+    border-color: shade(@theme_base_color, 0.9);
+}
+
+
+EvWindow.background EvSidebar.vertical .notebook {
+	border-color: shade(@theme_base_color, 0.7);
+    background-color: @theme_base_color;
+	border-radius: 0;
+}
+
+EvWindow.background EvSidebar.vertical .notebook.header { 
+    background-color: @theme_bg_color;
+    box-shadow: none;
+    background-image: none;
+    border-width: 0px;
+}
+
+EvWindow.background EvSidebar.vertical .notebook tab.top:active {
+	background-color: @theme_base_color;
+    background-image: none;
+}
+
+EvWindow.background EvSidebar.vertical .notebook tab.top {
+    border-color: transparent;
+    border-width: 0px;
+    background-image: none;
+    background-color: transparent;
+}
+
+EvWindow.background EvSidebar.vertical .notebook tab GtkLabel {
+    color: alpha(@toolbar_fg_color, 0.5);
+}
+
+EvWindow.background EvSidebar.vertical .notebook .prelight-page,
+EvWindow.background EvSidebar.vertical .notebook .prelight-page GtkLabel {
+    color: @theme_fg_color;
+}
+
+EvWindow.background EvSidebar.vertical .notebook .active-page,
+EvWindow.background EvSidebar.vertical .notebook tab .active-page GtkLabel {
+    color: alpha(@toolbar_fg_color, 1.0);
+}
+
+
+

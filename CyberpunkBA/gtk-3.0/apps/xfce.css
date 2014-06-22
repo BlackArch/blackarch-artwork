@@ -1,0 +1,77 @@
+XfceHeading {
+    background-color: @theme_base_color;
+    background-image: none;
+    padding: 0;
+    border-width: 0;
+}
+
+.xfce4-panel {
+    border-color: shade(@panel_bg_color, 0.8);
+    background-image: linear-gradient(to bottom,
+                                      shade(@panel_bg_color, 1.05),
+                                      shade(@panel_bg_color, 0.90)
+                                      );
+
+    font: normal;
+}
+
+.xfce4-panel .button {
+    padding: 1px;
+    border-width: 0 1px;
+    border-radius: 0;
+    border-color: transparent;
+    background-image: linear-gradient(to bottom,
+                                      shade(@panel_bg_color, 1.05),
+                                      shade(@panel_bg_color, 0.90)
+                                      );
+
+    color: @panel_fg_color;
+}
+
+.xfce4-panel .button:active {
+    border-color: shade(@panel_bg_color, 0.8);
+    background-image: linear-gradient(to bottom,
+                                      shade(shade(@panel_bg_color, 1.02), 0.95),
+                                      shade(shade(@panel_bg_color, 1.02), 0.90)
+                                      );
+}
+
+.xfce4-panel .button:hover {
+    border-color: transparent;
+    background-image: linear-gradient(to bottom,
+                                      shade(@panel_bg_color, 1.10),
+                                      shade(@panel_bg_color, 0.95)
+                                      );
+}
+
+.xfce4-panel .button:active:hover {
+    border-color: shade(@panel_bg_color, 0.8);
+    background-image: linear-gradient(to bottom,
+                                      shade(shade(@panel_bg_color, 1.02), 1.10),
+                                      shade(shade(@panel_bg_color, 1.02), 0.95)
+                                      );
+}
+
+/* menu-styling, e.g. for indicators */
+.xfce4-panel .menu,
+.xfce4-panel .menu GtkLabel,
+.xfce4-panel .menu GtkImage {
+    background-color: @menu_bg_color;
+    color: @menu_fg_color;
+}
+
+.xfce4-panel .menu *:hover {
+    border-color: shade(@theme_selected_bg_color, 0.9);
+    background-image: linear-gradient(to bottom,
+                                      shade(@theme_selected_bg_color, 1.10),
+                                      shade(@theme_selected_bg_color, 0.95)
+                                      );
+
+    color: @theme_selected_fg_color;
+}
+
+.xfce4-panel .menu GtkLabel:hover,
+.xfce4-panel .menu GtkImage:hover {
+    background-image: none;
+    background-color: transparent;
+}
